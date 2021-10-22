@@ -14,7 +14,6 @@ app.get("/",function(req,res){
 
 
 app.post("/",function(req,res){
-    console.log("I am going to be the greatest calisthenics artist .")
     const firstName =req.body.fname;
     const lastName = req.body.lname;
     const email = req.body.email;
@@ -49,7 +48,7 @@ app.post("/",function(req,res){
             console.log(JSON.parse(data));
         })
     })
-    // request.write(jsonData);
+    request.write(jsonData);
     request.end();
 });
 
